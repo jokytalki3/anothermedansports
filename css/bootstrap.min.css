@@ -1062,6 +1062,7 @@ img {
 	vertical-align: middle
 }
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+	margin: auto;
 	display: block;
 	max-width: 100%;
 	height: auto
@@ -1078,9 +1079,9 @@ img {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 4px;
-	-webkit-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out
+	-webkit-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out
 }
 .img-circle {
 	border-radius: 50%
@@ -1165,7 +1166,10 @@ p {
 	line-height: 1.4
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
+.max-height {
+	max-height: 250px	
+}
 .lead {
 	font-size: 21px
 }
@@ -1305,7 +1309,7 @@ dd {
 	margin-left: 0
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .dl-horizontal dt {
 	float: left;
 	width: 160px;
@@ -1421,7 +1425,7 @@ pre code {
 	margin-left: auto;
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .container {
 	width: 750px
 }
@@ -1611,7 +1615,7 @@ pre code {
 	margin-left: 0
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
 	float: left
 }
@@ -2187,6 +2191,9 @@ table td[class*=col-], table th[class*=col-] {
 }
 
 @media screen and (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .table-responsive {
 	width: 100%;
 	margin-bottom: 15px;
@@ -2557,7 +2564,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 	color: #737373
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .form-inline .form-group {
 	display: inline-block;
 	margin-bottom: 0;
@@ -2615,7 +2622,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 	margin-left: -15px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .form-horizontal .control-label {
 	padding-top: 7px;
 	margin-bottom: 0;
@@ -2626,13 +2633,13 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 	right: 15px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .form-horizontal .form-group-lg .control-label {
 	padding-top: 14.33px
 }
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .form-horizontal .form-group-sm .control-label {
 	padding-top: 6px
 }
@@ -3015,7 +3022,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)
 	margin-bottom: 2px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-right .dropdown-menu {
 	right: 0;
 	left: auto
@@ -3358,7 +3365,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	left: auto
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .nav-tabs.nav-justified>li {
 	display: table-cell;
 	width: 1%
@@ -3375,7 +3382,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	border: 1px solid #ddd
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .nav-tabs.nav-justified>li>a {
 	border-bottom: 1px solid #ddd;
 	border-radius: 4px 4px 0 0
@@ -3419,7 +3426,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	left: auto
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .nav-justified>li {
 	display: table-cell;
 	width: 1%
@@ -3439,7 +3446,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	border: 1px solid #ddd
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .nav-tabs-justified>li>a {
 	border-bottom: 1px solid #ddd;
 	border-radius: 4px 4px 0 0
@@ -3466,13 +3473,13 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	border: 1px solid transparent
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar {
 	border-radius: 4px
 }
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-header {
 	float: left
 }
@@ -3490,7 +3497,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	overflow-y: auto
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-collapse {
 	width: auto;
 	border-top: 0;
@@ -3525,7 +3532,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	margin-left: -15px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
 	margin-right: 0;
 	margin-left: 0
@@ -3536,7 +3543,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	border-width: 0 0 1px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-static-top {
 	border-radius: 0
 }
@@ -3548,7 +3555,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	z-index: 1030
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-fixed-bottom, .navbar-fixed-top {
 	border-radius: 0
 }
@@ -3576,7 +3583,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	display: block
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
 	margin-left: -15px
 }
@@ -3606,7 +3613,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	margin-top: 4px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-toggle {
 	display: none
 }
@@ -3621,6 +3628,9 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .navbar-nav .open .dropdown-menu {
 	position: static;
 	float: none;
@@ -3642,7 +3652,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-nav {
 	float: left;
 	margin: 0
@@ -3667,7 +3677,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1)
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-form .form-group {
 	display: inline-block;
 	margin-bottom: 0;
@@ -3714,6 +3724,9 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .navbar-form .form-group {
 	margin-bottom: 5px
 }
@@ -3722,7 +3735,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-form {
 	width: auto;
 	padding-top: 0;
@@ -3763,7 +3776,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	margin-bottom: 15px
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-text {
 	float: left;
 	margin-right: 15px;
@@ -3771,7 +3784,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .navbar-left {
 	float: left!important
 }
@@ -3830,6 +3843,9 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .navbar-default .navbar-nav .open .dropdown-menu>li>a {
 	color: #777
 }
@@ -3908,6 +3924,9 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .navbar-inverse .navbar-nav .open .dropdown-menu>.dropdown-header {
 	border-color: #080808
 }
@@ -4192,7 +4211,7 @@ a.badge:focus, a.badge:hover {
 	max-width: 100%
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width : 767px ){
 .jumbotron {
 	padding: 48px 0
 }
@@ -4212,9 +4231,9 @@ a.badge:focus, a.badge:hover {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 4px;
-	-webkit-transition: border .2s ease-in-out;
-	-o-transition: border .2s ease-in-out;
-	transition: border .2s ease-in-out
+	-webkit-transition: border .6s ease-in-out;
+	-o-transition: border .6s ease-in-out;
+	transition: border .6s ease-in-out
 }
 .thumbnail a>img, .thumbnail>img {
 	margin-right: auto;
@@ -4994,7 +5013,7 @@ button.close {
 	overflow: scroll
 }
 
-@media (min-width:768px) {
+@media (min-width : 767px ){
 .modal-dialog {
 	width: 600px;
 	margin: 30px auto
@@ -5241,16 +5260,15 @@ button.close {
 	position: relative
 }
 .carousel-inner {
-	position: relative;
-	width: 100%;
-	overflow: hidden
+	position: relative;	white-space: nowrap;
+	overflow: hidden;
 }
 .carousel-inner>.item {
 	position: relative;
 	display: none;
-	-webkit-transition: .2s ease-in-out left;
-	-o-transition: .2s ease-in-out left;
-	transition: .2s ease-in-out left
+	-webkit-transition: .6s ease-in-out left;
+	-o-transition: .6s ease-in-out left;
+	transition: .6s ease-in-out left
 }
 .carousel-inner>.item>a>img, .carousel-inner>.item>img {
 	line-height: 1
@@ -5258,9 +5276,9 @@ button.close {
 
 @media all and (transform-3d), (-webkit-transform-3d) {
 .carousel-inner>.item {
-	-webkit-transition: -webkit-transform .2s ease-in-out;
-	-o-transition: -o-transform .2s ease-in-out;
-	transition: transform .2s ease-in-out;
+	-webkit-transition: -webkit-transform .6s ease-in-out;
+	-o-transition: -o-transform .6s ease-in-out;
+	transition: transform .6s ease-in-out;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-webkit-perspective: 1000;
@@ -5315,7 +5333,7 @@ button.close {
 	left: 0;
 	width: 15%;
 	font-size: 20px;
-	color: #fff;
+	color: #2FC40A;
 	text-align: center;
 	text-shadow: 0 1px 2px rgba(0,0,0,.6);
 	filter: alpha(opacity=50);
@@ -5340,7 +5358,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 	background-repeat: repeat-x
 }
 .carousel-control:focus, .carousel-control:hover {
-	color: #fff;
+	color: #24930E;
 	text-decoration: none;
 	filter: alpha(opacity=90);
 	outline: 0;
@@ -5418,7 +5436,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 	text-shadow: none
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width : 767px ){
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 	width: 30px;
 	height: 30px;
@@ -5491,6 +5509,9 @@ width:device-width
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .visible-xs {
 	display: block!important
 }
@@ -5506,24 +5527,36 @@ td.visible-xs, th.visible-xs {
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .visible-xs-block {
 	display: block!important
 }
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .visible-xs-inline {
 	display: inline!important
 }
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .visible-xs-inline-block {
 	display: inline-block!important
 }
 }
 
 @media (min-width:768px)and (max-width:991px) {
+.max-height {
+	max-height: 250px	
+}
 .visible-sm {
 	display: block!important
 }
@@ -5539,18 +5572,27 @@ td.visible-sm, th.visible-sm {
 }
 
 @media (min-width:768px)and (max-width:991px) {
+	.max-height {
+	max-height: 250px	
+}
 .visible-sm-block {
 	display: block!important
 }
 }
 
 @media (min-width:768px)and (max-width:991px) {
+	.max-height {
+	max-height: 250px	
+}
 .visible-sm-inline {
 	display: inline!important
 }
 }
 
 @media (min-width:768px)and (max-width:991px) {
+	.max-height {
+	max-height: 255px	
+}
 .visible-sm-inline-block {
 	display: inline-block!important
 }
@@ -5623,12 +5665,18 @@ td.visible-lg, th.visible-lg {
 }
 
 @media (max-width:767px) {
+	.max-height {
+	max-height: 250px	
+}
 .hidden-xs {
 	display: none!important
 }
 }
 
 @media (min-width:768px)and (max-width:991px) {
+	.max-height {
+	max-height: 250px	
+}
 .hidden-sm {
 	display: none!important
 }
@@ -5697,3 +5745,9 @@ td.visible-print, th.visible-print {
 }
 }
 
+
+.max-height {
+
+
+	
+}

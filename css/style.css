@@ -19,11 +19,11 @@ body{
 .max-height{
 	min-width: 80%;
 	max-width:	100%;
-	max-height: 260px;
-	min-height: 280px;
+	max-height: 240px;
 	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	flex-direction: row;
 	
 }
 
@@ -167,11 +167,10 @@ li.image-carousel__item{
 	
 }
 .flash-sale-header{
-	width: auto;
+	width:20%;
 	height: 30px;
 	display: inline-block;
 	color: seagreen;
-	font-weight: bolder;
 	
 }
 .flash-sale-overview-carousel .header-section__header__title{
@@ -180,7 +179,7 @@ li.image-carousel__item{
 	font-weight: 400;
 	line-height: 1.2;
 	white-space: nowrap;
-	width: 88%;
+	width: 80%;
 	float: left;
 }
 
@@ -201,7 +200,7 @@ li.image-carousel__item{
 }
 .flash-sale-overview-carousel .header-section__header{
 	padding-left: .5rem;
-	padding-bottom: 0 !important;\
+	padding-bottom: 0 !important;
 	width: 100%;
 	display: block;
 }
@@ -1360,6 +1359,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 966px){
+	.max-height {
+	max-height: 250px	
+}
     .collapse-pdng {
         margin: 0 auto;
         width: 70%;
@@ -1374,6 +1376,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 800px){
+	.max-height {
+	max-height: 255px	
+}
     .collapse-pdng {
         margin: 0 auto;
         width: 60%;
@@ -1406,6 +1411,9 @@ div textarea {
 }
 }
 @media screen and (max-width : 851px ){
+	.max-height {
+	max-height: 255px	
+}
     .collapse-pdng {
         margin: 0 auto;
         width: 70%;
@@ -1434,6 +1442,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 768px){
+	.max-height {
+	max-height: 255px	
+}
     .collapse-pdng {
         margin: 0 auto;
         width: 70%;
@@ -1518,6 +1529,9 @@ div textarea {
     }
 }
 @media screen and (max-width:736px){
+	.max-height {
+	max-height: 250px	
+}
     .navbar-header {
         float: left;
         margin: -76px 0px 0px;
@@ -1677,6 +1691,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 667px){
+	.max-height {
+	max-height: 240px	
+}
    a.ft-log, a.ft-log:hover {
     padding: 34px;
 	}
@@ -1691,6 +1708,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 533px){
+	.max-height {
+	max-height: 240px	
+}
     .car-re-posn {
         bottom: 17%;
         padding: 0%;
@@ -1704,11 +1724,17 @@ div textarea {
     }
 }
 @media screen and (max-width: 568px){
+	.max-height {
+	max-height: 240px	
+}
     a.subs-btn {
         width: 17%;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width : 476px ){
+	.max-height {
+	max-height: 240px	
+}
     ul.social li a {
         margin: 20px 1px 0px;
     }
@@ -1806,6 +1832,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 414px){
+	.max-height {
+	max-height: 240px	
+}
     .car-re-posn h3 {
         font-size: 32px;
     }
@@ -1841,6 +1870,9 @@ div textarea {
 	}
 }
 @media screen and (max-width: 384px){
+	.max-height {
+	max-height: 240px	
+}
 .logo a, .logo a:hover {
     padding: 7px 23px;
     font-size: 45px;
@@ -1850,6 +1882,9 @@ div textarea {
 }
 }
 @media screen and (max-width: 375px){
+	.max-height {
+	max-height: 240px	
+}
     .logo a, .logo a:hover {
     padding: 6px 20px;
     font-size: 44px;
@@ -1859,6 +1894,9 @@ div textarea {
     }
 }
 @media screen and (max-width: 360px){
+	.max-height {
+	max-height: 240px	
+}
     a.ft-log, a.ft-log:hover {
     padding: 10px 15px !important;
 	}
@@ -1877,6 +1915,10 @@ div textarea {
     }
 }
 @media screen and (max-width:320px){
+	.max-height {
+	width: auto;
+	height: 240px!important;	
+	}
     .logo a, .logo a:hover {
     padding: 10px 25px;
     font-size: 30px;
@@ -2074,6 +2116,8 @@ div textarea {
         width: 100%;
         height: 250px;
     }
+	.max-height {
+	width: auto;
+	height: 240px!important;	
+	}
 }
-
-
