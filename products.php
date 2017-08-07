@@ -1,4 +1,10 @@
-<?php require('include/header.php');?>
+<?php
+  require('include/header.php');
+  require('include/config.php');
+  $result = $conn->prepare("SELECT * FROM  products WHERE  product_name LIKE  'kool' LIMIT 0 , 30");
+  echo $result;
+
+?>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     <li class="active">PRODUCTS</li>
@@ -16,22 +22,6 @@
                                 <div class="info">
                                     <div class="pull-left styl-hdn">
                                         <h3>style 01</h3>
-                                        <?php
-$servername = "localhost";
-$username = "medatulp";
-$password = "Y0EPF1Uee1swk";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-$result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'kool' LIMIT 0 , 30");
-										echo $result;
-?>
                                     </div>
                                     <div class="pull-right styl-price">
                                         <p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$190</span></a></p>
@@ -272,25 +262,25 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
 						 <div class="tab1">
-							 <ul class="place">								
+							 <ul class="place">
 								 <li class="sort">Shoes</li>
 								 <li class="by"><img src="images/do.png" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
-							 <div class="single-bottom">						
+							 <div class="single-bottom">
 									<a href="#"><p>Running</p></a>
 									<a href="#"><p>Foot ball</p></a>
 									<a href="#"><p>Daily</p></a>
 									<a href="#"><p>Sneakers</p></a>
 						     </div>
-					      </div>						  
+					      </div>
 						  <div class="tab2">
-							 <ul class="place">								
+							 <ul class="place">
 								 <li class="sort">Clothing</li>
 								 <li class="by"><img src="images/do.png" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
-							 <div class="single-bottom">						
+							 <div class="single-bottom">
 									<a href="#"><p>Tracks</p></a>
 									<a href="#"><p>Tees</p></a>
 									<a href="#"><p>Hair bands</p></a>
@@ -298,17 +288,17 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 						     </div>
 					      </div>
 						  <div class="tab3">
-							 <ul class="place">								
+							 <ul class="place">
 								 <li class="sort">Gear</li>
 								 <li class="by"><img src="images/do.png" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
-							 <div class="single-bottom">						
+							 <div class="single-bottom">
 									<a href="#"><p>Running app</p></a>
 									<a href="#"><p>Training club</p></a>
 									<a href="#"><p>Nike Fuel+Band se</p></a>
 						     </div>
-					      </div>						  
+					      </div>
 						  <!--script-->
 						<script>
 							$(document).ready(function(){
@@ -317,7 +307,7 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 								$(".tab3 .single-bottom").hide();
 								$(".tab4 .single-bottom").hide();
 								$(".tab5 .single-bottom").hide();
-								
+
 								$(".tab1 ul").click(function(){
 									$(".tab1 .single-bottom").slideToggle(300);
 									$(".tab2 .single-bottom").hide();
@@ -345,17 +335,17 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 									$(".tab3 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})	
+								})
 								$(".tab5 ul").click(function(){
 									$(".tab5 .single-bottom").slideToggle(300);
 									$(".tab4 .single-bottom").hide();
 									$(".tab3 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})	
+								})
 							});
 						</script>
-						<!-- script -->					 
+						<!-- script -->
 				 </section>
 				 <section  class="sky-form">
 					 <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
@@ -370,10 +360,10 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
 						 </div>
 					 </div>
-				 </section> 				 
+				 </section>
 				   <!---->
 					 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-					<script type='text/javascript'>//<![CDATA[ 
+					<script type='text/javascript'>//<![CDATA[
 					$(window).load(function(){
 					 $( "#slider-range" ).slider({
 								range: true,
@@ -385,7 +375,7 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 					 });
 					$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
-					});//]]>  
+					});//]]>
 
 					</script>
 					<section  class="sky-form">
@@ -421,9 +411,9 @@ $result = mysqli_query("SELECT * FROM  `products` WHERE  `product_name` LIKE  'k
 									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
 								</div>
 							</div>
-				   </section>		
+				   </section>
                     </div>
                </div>
             <div class="clearfix"></div>
-            </div> 
+            </div>
         <?php include('include/footer.php');?>
