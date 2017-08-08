@@ -1,6 +1,4 @@
-</div>
- <h1>&nbsp;</h1>
- <div class="footer-grid">
+<div class="footer-grid">
   <div class="container">
     <div class="col-md-2 re-ft-grd">
       <h3>Categories</h3>
@@ -46,5 +44,3 @@
     </div>
   </div>
 </div>
-</body>
-</html>

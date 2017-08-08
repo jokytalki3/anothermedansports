@@ -1,12 +1,64 @@
-<?php
-  require('include/header.php');
-  require('include/config.php');
-  $result = $conn->prepare("SELECT * FROM  products WHERE  product_name LIKE  'kool' LIMIT 0 , 30");
-  echo $result;
-
+<?php //script error reporting
+error_reporting(E_ALL);
+ini_set('display_error','1');
 ?>
+<?php
+if(isset($_GET['id'])){
+	$id = preg_replace('#[0-9]#i',$_GET['id']);
+	//Use this var to check see if ID exists in database, if yes then get
+	//the product details, if no then exit database and give a message
+	$sql=mysql_query("SELECT * FROM products WHERE product_id='$id' LIMIT 1");
+	$productCount = mysql_num_rows($sql);
+	if($productCount > 0){
+		//get all the product details with loop
+		while($row= mysql_fetch_array($sql)){
+		$id=$row["product_id"];
+		$product_name= $row["product_name"];
+		$price = $row["price"];
+		$details=$row["details"];
+		$category=$row["category"];
+		
+		//product name, price, details, category, subcategory
+		}
+	}else{
+		echo "Data to render this page is missing, count more than 1";
+		exit();
+	}
+}else{
+	echo "Data to render this page is missing";
+	exit();
+}
+mysql_close();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Medan Sports</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta charset utf="8">
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" type="text/css">
+
+<!--fonts-->
+<!--bootstrap-->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!--coustom css-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!--shop-kart-js-->
+<script src="js/simpleCart.min.js"></script>
+<!--default-js-->
+<script src="js/jquery-2.1.4.min.js"></script>
+<!--bootstrap-js-->
+<script src="js/bootstrap.min.js"></script>
+<!--script-->
+</head>
+<body>         
+               <?php require('include/header.php');?>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li class="active">PRODUCTS</li>
                 </ol>
             </div>
@@ -262,25 +314,25 @@
 					 <div class="product_right">
 						 <h4 class="m_2"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Categories</h4>
 						 <div class="tab1">
-							 <ul class="place">
+							 <ul class="place">								
 								 <li class="sort">Shoes</li>
 								 <li class="by"><img src="images/do.png" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
-							 <div class="single-bottom">
+							 <div class="single-bottom">						
 									<a href="#"><p>Running</p></a>
 									<a href="#"><p>Foot ball</p></a>
 									<a href="#"><p>Daily</p></a>
 									<a href="#"><p>Sneakers</p></a>
 						     </div>
-					      </div>
+					      </div>						  
 						  <div class="tab2">
-							 <ul class="place">
+							 <ul class="place">								
 								 <li class="sort">Clothing</li>
 								 <li class="by"><img src="images/do.png" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
-							 <div class="single-bottom">
+							 <div class="single-bottom">						
 									<a href="#"><p>Tracks</p></a>
 									<a href="#"><p>Tees</p></a>
 									<a href="#"><p>Hair bands</p></a>
@@ -288,17 +340,17 @@
 						     </div>
 					      </div>
 						  <div class="tab3">
-							 <ul class="place">
+							 <ul class="place">								
 								 <li class="sort">Gear</li>
 								 <li class="by"><img src="images/do.png" alt=""></li>
 									<div class="clearfix"> </div>
 							  </ul>
-							 <div class="single-bottom">
+							 <div class="single-bottom">						
 									<a href="#"><p>Running app</p></a>
 									<a href="#"><p>Training club</p></a>
 									<a href="#"><p>Nike Fuel+Band se</p></a>
 						     </div>
-					      </div>
+					      </div>						  
 						  <!--script-->
 						<script>
 							$(document).ready(function(){
@@ -307,7 +359,7 @@
 								$(".tab3 .single-bottom").hide();
 								$(".tab4 .single-bottom").hide();
 								$(".tab5 .single-bottom").hide();
-
+								
 								$(".tab1 ul").click(function(){
 									$(".tab1 .single-bottom").slideToggle(300);
 									$(".tab2 .single-bottom").hide();
@@ -335,17 +387,17 @@
 									$(".tab3 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})
+								})	
 								$(".tab5 ul").click(function(){
 									$(".tab5 .single-bottom").slideToggle(300);
 									$(".tab4 .single-bottom").hide();
 									$(".tab3 .single-bottom").hide();
 									$(".tab2 .single-bottom").hide();
 									$(".tab1 .single-bottom").hide();
-								})
+								})	
 							});
 						</script>
-						<!-- script -->
+						<!-- script -->					 
 				 </section>
 				 <section  class="sky-form">
 					 <h4><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>DISCOUNTS</h4>
@@ -360,10 +412,10 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other(50)</label>
 						 </div>
 					 </div>
-				 </section>
+				 </section> 				 
 				   <!---->
 					 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-					<script type='text/javascript'>//<![CDATA[
+					<script type='text/javascript'>//<![CDATA[ 
 					$(window).load(function(){
 					 $( "#slider-range" ).slider({
 								range: true,
@@ -375,7 +427,7 @@
 					 });
 					$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
-					});//]]>
+					});//]]>  
 
 					</script>
 					<section  class="sky-form">
@@ -411,9 +463,11 @@
 									<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
 								</div>
 							</div>
-				   </section>
+				   </section>		
                     </div>
                </div>
             <div class="clearfix"></div>
-            </div>
+            </div> 
         <?php include('include/footer.php');?>
+</body>
+</html>

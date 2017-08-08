@@ -123,7 +123,8 @@ License: Creative Commons Attribution 3.0 UnportedLicense URL: http://creativeco
             <html lang="en">
               <head>
                 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-                <title>Medan Sports Registration</title>
+                <title>N-Air a E-commerce category Flat Bootstrap Responsive
+                  Website Template | Checkout :: w3layouts</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
                 <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -162,7 +163,7 @@ License: Creative Commons Attribution 3.0 UnportedLicense URL: http://creativeco
                 <div class="header">
                   <div class="container">
                     <div class="header-top">
-                      <div class="logo"> <a href="index.html">N-AIR</a>
+                      <div class="logo"> <a href="index.php">N-AIR</a>
                       </div>
                       <div class="login-bars"> <a class="btn btn-default log-bar"
                           href="register.php" role="button">Sign up</a> <a class="btn btn-default log-bar"
@@ -279,7 +280,7 @@ License: Creative Commons Attribution 3.0 UnportedLicense URL: http://creativeco
                 <div class="head-bread">
                   <div class="container">
                     <ol class="breadcrumb">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="index.php">Home</a></li>
                       <li><a href="register.php">LOGIN</a></li>
                       <li class="active">REGISTER</li>
                     </ol>
@@ -381,7 +382,7 @@ License: Creative Commons Attribution 3.0 UnportedLicense URL: http://creativeco
                 <div class="col-md-2 re-ft-grd">
                     <div class="bt-logo">
                         <div class="logo">
-                            <a href="index.html" class="ft-log">N-AIR</a>
+                            <a href="index.php" class="ft-log">N-AIR</a>
                         </div>
                     </div>
                 </div>
