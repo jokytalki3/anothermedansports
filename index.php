@@ -1,62 +1,7 @@
-<?php require("include/db_connect.php"); ?>
-<?php 
-$dynamicList="";
-$sql= "SELECT * FROM products";
-$result= $sql->fetchAll();
-foreach($result as $row){
-	$id= $row['product_id'];
-	$name=$row['product_name'];
-	$price=$row['price'];
-	$dynamicList='<div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="product.php?id='. $id .'">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="./images/'. $id .'.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">'.$price.'</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>'.$name.'</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>';
-}
-
-?>
-
-<?php ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <title>Medan Sports</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
-    <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!--fonts-->
-    <link href="//fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"
-      type="text/css">
-    <!--fonts-->
-    <!--bootstrap-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!--coustom css-->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!--shop-kart-js-->
-    <script src="js/simpleCart.min.js"></script>
-    <!--default-js-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <!--bootstrap-js-->
-    <script src="js/bootstrap.min.js"></script>
-    <!--script-->
-  </head>
-  <body>
-    <?php require('include/header.php'); ?>
+    <?php 
+	require("include/config.php");
+	$title="Medan Sports";
+	require('include/header.php'); ?>
     <div class="header-end">
       <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -105,7 +50,7 @@ foreach($result as $row){
           <div class="header-section__header">
             <div class="header-section__header__title">
               <div class="flash-sale-header">
-                <h3>HOT RIGHT NOW</h3>
+                <h3>HOT RIGHT NOW </h3>
               </div>
             </div>
             <a class="header-section__header-link" href="#">
@@ -118,206 +63,27 @@ foreach($result as $row){
               <div class="carousel carousel-showmanymoveone slide max-height" id="carousel123">
                 <div class="carousel-inner max-height">
                   <div class="item active">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link " href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>1This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <!--<div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>2This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>-->
-                  <?php echo $dynamicList; ?>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>3This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
+                    <?php
+					//display 6
+					  $data="SELECT * FROM products LIMIT 0,6";
+					  include('include/display6items.php');
+					  ?>
                   </div>
                   <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>4This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>5This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>6This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>7This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>8This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>9This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
-                  <div class="item">
-                    <div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
-                        class="flash-sale-item-card-link" href="#">
-                        <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
-                          <img src="/images/loadingpic.png" class="img-responsive ">
-                        </div>
-                        <div class="flash-sale-item-card__lower-wrapper">
-                          <!--the detail of the product-->
-                          <div class="flash-sale-item-card__lower-left">
-                            <div class="flash-sale-item-card__current-price--homepage">
-                              <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
-                              <span class="flash-sale-item-price flash-sale-item-price--number">123.00</span>
-                            </div>
-                          </div>
-                          <div class="flash-sale-item-card__short-desc"> <span>10This
-                              is my first sample flash item sales diplayed ever</span>
-                          </div>
-                        </div>
-                      </a> </div>
-                  </div>
+                  	<?php
+					//display 6
+					  $data="SELECT * FROM products LIMIT 6,6";
+					  include('include/display6items.php');
+					?>
+				  </div>
+              	  <div class="item">
+                  	<?php
+					//display 6
+					  $data="SELECT * FROM products LIMIT 12,6";
+					  include('include/display6items.php');
+					?>
+				  </div>
+               	  
                 </div>
                 <a class="left carousel-control" href="#carousel123" data-slide="prev"><em
                     class="glyphicon glyphicon-chevron-left"></em></a> <a class="right carousel-control"
