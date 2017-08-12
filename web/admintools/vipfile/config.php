@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "medatulp";
-$password = "Y0EPF1Uee1swk";
-$dbname = "medatulp_medansports";
+$username = "root";
+$password = "";
+$dbname = "medansports";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname",
@@ -14,9 +14,4 @@ catch(PDOException $e)
 {
   echo "Connection failed: " . $e->getMessage();
 }
-
-//include the user class, pass in the database connection
-include('user.php');
-
-$user = new User($conn);
  ?>
