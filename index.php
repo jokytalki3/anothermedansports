@@ -1,7 +1,9 @@
-<?php require("include/config.php");
+<?php require("include/db_connect.php"); ?>
+<?php 
 $dynamicList="";
-$sql= $conn->prepare('SELECT * FROM products');
-foreach($sql->fetchAll() as $row){
+$sql= "SELECT * FROM products";
+$result= $sql->fetchAll();
+foreach($result as $row){
 	$id= $row['product_id'];
 	$name=$row['product_name'];
 	$price=$row['price'];
@@ -26,12 +28,35 @@ foreach($sql->fetchAll() as $row){
                   </div>';
 }
 
-//Title and header library
-$title="Medan Sports is cheap";
-require('include/header.php');
+?>
 
-		 ?>
-
+<?php ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Medan Sports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+    <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--fonts-->
+    <link href="//fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"
+      type="text/css">
+    <!--fonts-->
+    <!--bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--shop-kart-js-->
+    <script src="js/simpleCart.min.js"></script>
+    <!--default-js-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--script-->
+  </head>
+  <body>
+    <?php require('include/header.php'); ?>
     <div class="header-end">
       <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -119,7 +144,7 @@ require('include/header.php');
                           <img src="/images/loadingpic.png" class="img-responsive ">
                         </div>
                         <div class="flash-sale-item-card__lower-wrapper">
-
+                          
                           <div class="flash-sale-item-card__lower-left">
                             <div class="flash-sale-item-card__current-price--homepage">
                               <span class="flash-sale-item-price flash-sale-item-price--dollar-sign">RM</span>
@@ -328,7 +353,7 @@ require('include/header.php');
 }());</script> </div>
       </div>
     </div>
-
+   
     <div class="shop-grid">
       <div class="container">
         <div class="col-md-4 grid-stn simpleCart_shelfItem">
@@ -454,7 +479,7 @@ require('include/header.php');
         <div class="clearfix"></div>
       </div>
     </div>
-
+    
     <?php require('include/footer.php'); ?>
   </body>
 </html>
