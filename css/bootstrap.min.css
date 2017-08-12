@@ -3619,7 +3619,7 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 }
 }
 .navbar-nav {
-	margin: 7.5px -15px
+	margin: 7.5px -15px;
 }
 .navbar-nav>li>a {
 	padding-top: 10px;
@@ -5662,6 +5662,8 @@ td.visible-lg, th.visible-lg {
 .visible-lg-inline-block {
 	display: inline-block!important
 }
+	
+	
 }
 
 @media (max-width:767px) {

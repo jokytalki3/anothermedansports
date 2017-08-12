@@ -1,7 +1,4 @@
 <?php
-ob_start();
-session_start();
-
 $servername = "localhost";
 $username = "medatulp";
 $password = "Y0EPF1Uee1swk";
