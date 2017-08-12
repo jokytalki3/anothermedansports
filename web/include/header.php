@@ -1,8 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title><?php if(isset($title)){ echo $title; }?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="N-Air Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+    <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--fonts-->
+    <link href="//fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"
+      type="text/css">
+    <!--fonts-->
+    <!--bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--shop-kart-js-->
+    <script src="js/simpleCart.min.js"></script>
+    <!--default-js-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--script-->
+  </head>
+  <body>
 <div class="header">
   <div class="container">
     <div class="header-top">
       <div class="logo"> <a href="index.php">N-AIR</a> </div>
-      <div class="login-bars"> <a class="btn btn-default log-bar" href="register.php" role="button">Sign up</a> <a class="btn btn-default log-bar" href="signup.php" role="button">Login</a>
+      <div class="login-bars"> <a class="btn btn-default log-bar" href="register.php" role="button">Sign up</a> <a class="btn btn-default log-bar" href="login.php" role="button">Login</a>
         <div class="cart box_1"> <a href="checkout.html">
           <h3>
             <div class="total"> <span class="simpleCart_total"></span>(<span id="simpleCart_quantity" class="simpleCart_quantity"></span>)</div>
@@ -21,7 +46,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
           <!--/.navbar-header-->
-          
+
           <div class="collapse navbar-collapse collapse-pdng" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-font">
               <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sports Equipment<b class="caret"></b></a>
@@ -142,18 +167,18 @@
                   <li><a href="products.php">Mug</a></li>
                   <li><a href="products.php">Chop</a></li>
                 </ul>
-                
+
               </li>
               <li class="hidden"><a href="contact.html">Custom Made</a></li>
               <li class="hidden"><a href="#">FAQ</a></li>
             </ul>
           </div>
-          <!--/.navbar-collapse--> 
+          <!--/.navbar-collapse-->
         </nav>
-        <!--/.navbar--> 
+        <!--/.navbar-->
       </div>
-      <!--/.content---> 
+      <!--/.content--->
     </div>
-    <!--header-bottom--> 
+    <!--header-bottom-->
   </div>
 </div>
