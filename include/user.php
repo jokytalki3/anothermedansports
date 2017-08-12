@@ -14,7 +14,6 @@ class User extends Password{
 
 		try {
 			$stmt = $this->_conn->prepare('SELECT password, username FROM Member WHERE username = :username');
-      $stmt->bindParam(':username', $_POST['username']);
 			$stmt->execute(array('username' => $username));
 
 			return $stmt->fetch();
