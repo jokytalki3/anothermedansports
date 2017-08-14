@@ -15,7 +15,7 @@
 		$id= $row['product_id'];
 		$name=$row['product_name'];
 		$price=$row['price'];
-		$dynamicList .='<div class="col-xs-12 col-sm-4 col-md-2 flash-sale-item-card"><a
+		$dynamicList .='<div class="col-xs-6 col-sm-4 col-md-2 flash-sale-item-card"><a
                         class="flash-sale-item-card-link" href="single.php?id='. $id .'">
                         <div class="flash-sale-item-card__image flash-sale-item-card__image--home-page">
                           <img src="./images/'. $id .'.png" class="img-responsive ">

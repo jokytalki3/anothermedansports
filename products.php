@@ -1,9 +1,5 @@
-<?php //script error reporting
-error_reporting(E_ALL);
-ini_set('display_error','1');
-?>
 <?php
-require_once('include/config.php');
+require('include/config.php');
 if(isset($_GET['cat_id'])){
 	$cat_id = preg_replace('#[^A-Z0-9]#i','',$_GET['cat_id']);
 	//this if else condition determines the amounts of products to be displayed per page
@@ -63,6 +59,13 @@ if(isset($_GET['cat_id'])){
 	exit();
 }
 ?>
+       <?php //this code count the pages needed where the data is selected and split on pages
+$sql=$conn->prepare("SELECT COUNT(product_id) AS total FROM products WHERE cat_id='$cat_id'");
+$sql->execute();
+$result=$sql->fetchAll(PDO::FETCH_ASSOC);
+foreach($result as $row){
+$totalpages=ceil($row['total']/$productPerPage);//calculate the total pages with result product
+} ?>
         <?php 
 $title=$cat_name;
 require('include/header.php');?>
@@ -239,19 +242,21 @@ require('include/header.php');?>
                </div>
             <div class="clearfix"></div>
             </div> 
-            <div class="container" align="right">
+            <div class="page-nav" align="center">
             <?php
-//this code count the pages needed where the data is selected and split on pages
-$sql=$conn->prepare("SELECT COUNT(product_id) AS total FROM products WHERE cat_id='$cat_id'");
-$sql->execute();
-$result=$sql->fetchAll(PDO::FETCH_ASSOC);
-foreach($result as $row){
-$totalpages=ceil($row['total']/$productPerPage);//calculate the total pages with result product
-}
+			echo "<span style='padding: 2px 4px 2px 5px;
+    margin: 10px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #FF8B19;'>".$row['total']." results shown</span>";
 for ($i=1; $i<=$totalpages; $i++) {  // print links for all pages
-            echo "<a href='products.php?cat_id=".$cat_id."&page=".$i."'";
-            if ($i==$page)  echo " class='curPage'";
-            echo ">".$i." </a> "; 
+            echo "<a href='products.php?cat_id=".$cat_id."&page=".$i."' style='padding: 2px 4px 2px 5px;
+    margin: 2px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #FF8B19;'";
+            if ($i==$page)  echo "style='background-color: #FF0004;'";
+            echo ">".$i." </a>"; 
 };
 ?></div>
         <?php include('include/footer.php');?>
